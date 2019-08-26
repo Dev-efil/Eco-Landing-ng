@@ -1,0 +1,23 @@
+.nav-align
+{
+    padding: 25px 16px;
+}
+nav a{
+    color: white;
+    font-size: 20px;
+
+}
+.logo
+{
+    height: 50px;
+    width: 50px;
+}
+.midspace
+{
+    margin-right: 40px;
+}
+.logopad
+{
+    padding-top: 5px;
+    padding-bottom: 0px;
+}

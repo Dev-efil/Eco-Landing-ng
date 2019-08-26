@@ -1,0 +1,36 @@
+.featured-area
+{
+    padding-top: 80px;
+}
+.feature-color
+{
+    color: white;
+}
+.featured-mobile
+{
+    height: 600px;
+    display: flex;
+    align-items: center;
+    padding-top: 90px;
+}
+.featured-title
+{
+    padding-bottom: 67px;
+    padding-left: 15px;
+}
+.featured-single-items
+{
+    margin-left: 18px;
+}
+.featured-single
+{
+    margin-bottom: 49px;
+}
+.featured-single-text
+{
+    margin-left: 70px;
+}
+.featured-single img
+{
+    float: left;
+}

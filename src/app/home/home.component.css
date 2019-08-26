@@ -1,0 +1,35 @@
+.home-color
+{
+    color: white;
+}
+.apple-download-btn
+{
+    margin-right: 20px;
+}
+.apple-download-btn, .google-download-btn2
+{
+    height: 50px;
+    width: 158px;
+}
+.mobframe
+{
+    top: 50px;
+    right: -25px;
+    width: 128%;
+
+}
+.mobiledemo
+{
+    max-width: 100%;
+}
+.lolo
+{
+    background-position: center;
+    background-size: cover;
+    padding: 100px 0px;
+    position: relative;
+}
+.card
+{
+    margin-right: 10px;
+}

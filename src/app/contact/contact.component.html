@@ -1,0 +1,56 @@
+<div class="contact-area" id="contact">
+    <div class="container justify-content-center">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="section-title contact-color">
+                    <h2>Contact US</h2>
+                    <p class="contact-text">Most such devices are sold with several apps bundled as pre-installed software,
+                        <br> such as a web browser, email client, calendar, mapping program.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row contactpad">
+            <div class="col-md-6 offset-lg-1">         
+            <div class="container-fluid contact-form">
+                <form #contactForm="ngForm">
+                    <div class="row">
+                        <div class="form-group col-lg-6 field-margin">
+                            <input type="text" class="form-control" placeholder="Name" name="name" #Name="ngModel" [class.is-invalid]="Name.invalid && Name.touched" [(ngModel)]="contactModel.Name" required>
+                        
+                            <small class="text-danger">Name required</small>
+                        </div>
+                        <div class="form-group col-lg-6 field-margin">
+                            <input type="email" class="form-control" placeholder="Email" name="email" [(ngModel)]="contactModel.email" required>
+                        </div>
+                        <div class="form-group col-lg-12 field-margin">
+                            <input type="text" class="form-control" placeholder="Subject" name="subject" [(ngModel)]="contactModel.subject" required>
+                        </div>
+                        <div class="form-group col-lg-12 field-margin">
+                            <textarea class="form-control" placeholder="Message" rows="1" name="message" [(ngModel)]="contactModel.message" required></textarea>
+                        </div>
+                        <div class="form-group col-lg-12 field-margin">
+                            <input type="submit" class="form-control" value="Send message">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="contact-form-right justify-content-center">
+                    <div class="contact-form-right-single">
+                        <h5>Phone</h5>
+                        <p> 435 408 9068</p>
+                    </div>
+                    <div class="contact-form-right-single">
+                        <h5>Email</h5>
+                        <p> contact@ecoseize.com</p>
+                    </div>
+                    <div class="contact-form-right-single">
+                        <h5>Address</h5>
+                        <p> 3145 Beeghley Street Valley Mills Texas 76689</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    height: 100%;
+    background: fixed;
+    background-image: linear-gradient(to bottom, #3D998A,#D6D1D8);
+}
+
+/* testcolor
+{
+    color: #B8E68A;
+    color: #ACE6A1;
+    color: #69BF8D;
+    color: #3D998A;
+    color: #094C59;
+}  */
+
+/* html
+{
+    background-color: blue !important;
+} */
