@@ -70,7 +70,7 @@
 {
     margin-bottom: 24px;
 }
-.contact-form form input[type="submit"]
+/* .contact-form form input[type="submit"]
 {
     color: white;
     width: 100%;
@@ -84,3 +84,9 @@
     border-radius: 8px;
     background-image: -webkit-linear-gradient(0deg, #3D998A 0%, #69BF8D 60%, #ACE6A1 100%);
 }
+
+
+.contact-form form input,textarea:disabled
+{
+    opacity: 9px;
+} */
