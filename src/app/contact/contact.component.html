@@ -12,24 +12,39 @@
         <div class="row contactpad">
             <div class="col-md-6 offset-lg-1">         
             <div class="container-fluid contact-form">
-                <form #contactForm="ngForm">
+                <form #contactForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+                    <div *ngIf="submitted" class="alert alert-success" role="alert">
+                        Thank you for contacting us, Your massage is successfully received!
+                    </div>
                     <div class="row">
                         <div class="form-group col-lg-6 field-margin">
-                            <input type="text" class="form-control" placeholder="Name" name="name" #Name="ngModel" [class.is-invalid]="Name.invalid && Name.touched" [(ngModel)]="contactModel.Name" required>
-                        
-                            <small class="text-danger">Name required</small>
+                            <input type="text" placeholder="Name" name="name" #Name="ngModel" [class.is-invalid]="Name.invalid && Name.touched"  class="form-control" [(ngModel)]="contactModel.name" pattern="[a-zA-Zd.]{4,}" required>
+                            <div *ngIf="Name.errors && (Name.invalid || Name.touched)">
+                                <small class="text-danger" *ngIf="Name.errors.required">Name is required.</small>
+                                <small class="text-danger" *ngIf="Name.errors.pattern">Name must be grater than 3 letter.</small>
+                            </div>
                         </div>
                         <div class="form-group col-lg-6 field-margin">
-                            <input type="email" class="form-control" placeholder="Email" name="email" [(ngModel)]="contactModel.email" required>
+                            <input type="email" placeholder="Email" name="email" #Email="ngModel" [class.is-invalid]="Email.invalid && Email.touched" class="form-control"  [(ngModel)]="contactModel.email" required>
+                            <div *ngIf="Email.errors && (Email.invalid || Email.touched)">
+                                <small class="text-danger" *ngIf="Email.errors.required">Email is required</small>
+                                <!-- <small class="text-danger">Please enter a valid e-mail address.</small> -->
+                            </div>
                         </div>
                         <div class="form-group col-lg-12 field-margin">
-                            <input type="text" class="form-control" placeholder="Subject" name="subject" [(ngModel)]="contactModel.subject" required>
+                            <input type="text" placeholder="Subject" name="subject" #Subject="ngModel" [class.is-invalid]="Subject.invalid && Subject.touched" class="form-control"  [(ngModel)]="contactModel.subject" required>
+                            <div *ngIf="Subject.errors && (Subject.invalid || Subject.touched)">
+                                <small class="text-danger" *ngIf="Subject.errors.required">Subject is required.</small>
+                            </div>
                         </div>
                         <div class="form-group col-lg-12 field-margin">
-                            <textarea class="form-control" placeholder="Message" rows="1" name="message" [(ngModel)]="contactModel.message" required></textarea>
+                            <textarea placeholder="Message" rows="1" name="message" #Message="ngModel" [class.is-invalid]="Message.invalid && Message.touched" class="form-control"  [(ngModel)]="contactModel.message" required></textarea>
+                            <div *ngIf="Message.errors && (Message.invalid || Message.touched)">
+                                <small class="text-danger" *ngIf="Message.errors.required">Message is required.</small>
+                            </div>
                         </div>
                         <div class="form-group col-lg-12 field-margin">
-                            <input type="submit" class="form-control" value="Send message">
+                            <button type="submit" class="btn btn-success form-control" [disabled]="contactForm.form.invalid">Send Message</button>
                         </div>
                     </div>
                 </form>
